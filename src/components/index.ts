@@ -1,2 +1,2 @@
-export * from "./componentB";
-export * from "./componentA";
+export * from "./addUser";
+export * from "./userTable";
