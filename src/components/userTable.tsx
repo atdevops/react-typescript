@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import styles from '../styles/
+import styles from '../styles/table.module.css'
 interface Props {
   data: User[]
 }
@@ -33,7 +33,7 @@ export const UserTable: React.FC<Props> = ({data}) => {
 
 
   return (
-    <table>
+    <table className={styles.table}>
       <thead>
         <tr>
           <th onClick={() => handleSort('name')}>Name</th>

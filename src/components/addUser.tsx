@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
+import styles from "../styles/form.module.css"
 
 interface Props {
   handleAdd: Function
@@ -33,7 +34,7 @@ export const AddUser: React.FC<Props> = ({handleAdd}) => {
       navigate('/')
   }
 
-  return <form onSubmit={handleSubmit}>
+  return <form className={styles.form} onSubmit={handleSubmit}>
     <label>Name:</label>
     <input type="text" value={name} onChange={(e)=>setName(e?.target?.value)} />
     <input type="text" value={email} onChange={(e)=>setEmail(e?.target?.value)} />

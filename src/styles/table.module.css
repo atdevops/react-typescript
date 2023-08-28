@@ -1,0 +1,15 @@
+.table {
+    width: 100%;
+    padding: 10px;
+}
+
+.table th,
+.table td {
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+.table th {
+    background-color: #fff;
+    cursor: pointer;
+}

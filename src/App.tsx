@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useRoutes } from "react-router";
 import { UserTable, AddUser } from "components";
+import { Link } from "react-router-dom";
+import styles from "./styles/nav.module.css"
 
 const App: React.FC = () => {
   const [data, setData] = useState<User[]>([]);
@@ -28,7 +30,19 @@ const App: React.FC = () => {
     { path: "/", element: <UserTable data={data} /> },
     { path: "/addUser", element: <AddUser handleAdd={handleAdd} /> },
   ]);
-  return routes;
+  return (
+    <>
+    <ul className={styles.nav}>
+      <li>
+        <Link to="/">User Table</Link>
+        </li>
+        <li>
+        <Link to="/adduser">Add User</Link>
+      </li>
+    </ul>
+    {routes}
+    </>
+  )
 };
 
 export default App;
